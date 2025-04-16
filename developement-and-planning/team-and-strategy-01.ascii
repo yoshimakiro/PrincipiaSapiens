@@ -1,0 +1,71 @@
+== Method
+
+=== Development Phases and Agent Specialization
+
+The development will follow an Agile methodology with strong TDD principles. Each phase concludes with comprehensive code review and adversarial testing by a dedicated Testing Agent to maintain quality and security. A Phase Lead agent manages each phase with the Manager/Coordinator overseeing cross-phase alignment.
+
+[cols="1,2,3,2", options="header"]
+|===
+| Phase
+| Objectives
+| Required AI Agents
+| Estimated Agent Count
+
+| Phase 1: Core Chain Protocol
+| - Block, transaction, and UTXO design  
+  - PoW consensus using quantum-safe hash  
+  - Block production and validation  
+  - Chain selection logic (longest valid chain)  
+  - Difficulty recalculated every block  
+| - Architect Agent  
+  - Protocol Engineer Agent  
+  - Storage & Ledger Agent  
+  - Testing & Validation Agent  
+| 4 (1 per specialty)
+
+| Phase 2: P2P Networking Layer
+| - Decentralized node discovery  
+  - Message propagation (inv, block, tx)  
+  - Sovereign bootstrap mechanism  
+| - Network & P2P Agent  
+  - Testing & Validation Agent  
+| 2
+
+| Phase 3: Wallet & UTXO Management
+| - Basic wallet CLI  
+  - UTXO selection algorithms  
+  - Transaction construction and signing (SPHINCS+)  
+| - Protocol Engineer Agent  
+  - Storage & Ledger Agent  
+  - Testing & Validation Agent  
+| 3
+
+| Phase 4: SPV Node Functionality
+| - Merkle proof generation and validation  
+  - Header-only node sync  
+  - Payment verification  
+| - Protocol Engineer Agent  
+  - Network & P2P Agent  
+  - Testing & Validation Agent  
+| 3
+
+| Phase 5: Optional Privacy Enhancements
+| - zk-STARK research & integration roadmap  
+  - Optional tx/block compression using zk  
+| - Architect Agent  
+  - Cryptography Specialist Agent  
+  - Testing & Validation Agent  
+| 3
+
+| Phase 6: Performance Optimization & Hardening
+| - Fuzz testing and adversarial simulation  
+  - Refactoring for performance bottlenecks  
+| - Testing & Validation Agent  
+  - Storage & Ledger Agent  
+  - Protocol Engineer Agent  
+| 3
+
+|===
+
+Each agent is autonomous, test-driven, and aligned through CI/CD integration. The Testing & Validation Agent operates independently, with authority to block progress if quality, coverage, or correctness diverge from targets.
+
